@@ -1,0 +1,14 @@
+type User{
+  id: ID! @unique
+  name: String! @unique
+  username: String! @unique
+  email: String! @unique
+  password: String!
+  teams: [Team!]!
+}
+
+type Team{
+  id: ID! @unique
+  name: String!
+  users: [User!]!
+}

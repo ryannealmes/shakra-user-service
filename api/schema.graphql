@@ -1,0 +1,20 @@
+# import User from "./generated/prisma.graphql"
+# import Team from "./generated/prisma.graphql"
+
+type Mutation {
+  login(email: String!, password: String!): String
+  signup(email: String!, password: String!, name: String!, username: String!): String
+  addUserToTeam(input: AddUserToTeamInput!): User
+}
+
+type Query {
+  me: User
+  users: [User!]!
+  teams: [Team!]!
+  publicKey: String!
+}
+
+input AddUserToTeamInput {
+  userId: String!
+  teamId: String!
+}

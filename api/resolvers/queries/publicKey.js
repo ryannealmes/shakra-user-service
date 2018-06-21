@@ -1,5 +1,5 @@
 const auth = require('../../utils').authentication
 
-module.exports = (parent, args, ctx) => {
+module.exports = () => {
   return auth.publicKey()
 }

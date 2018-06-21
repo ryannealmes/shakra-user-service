@@ -1,6 +1,4 @@
-const {
-  Prisma
-} = require('prisma-binding')
+const { Prisma } = require('prisma-binding')
 
 module.exports = {
   userService: new Prisma({
